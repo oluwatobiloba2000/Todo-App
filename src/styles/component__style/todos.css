@@ -1,4 +1,4 @@
-.todos{
+.todos {
     position: relative;
     border: 1px solid #3367d6;
     margin: 5px;
@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 
-.todo__remove__btn{
+.todo__remove__btn {
     height: 33px;
     min-width: 41px;
     border-radius: 20px;
@@ -22,7 +22,7 @@
     background-color: #3367d6;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     left: -16px;
     top: -1px;
@@ -30,13 +30,41 @@
     border-bottom: 15px solid transparent;
 }
 
-.todo__count__container{
+.todo__count__container {
     position: sticky;
     top: 105px;
     background-color: #fff;
     z-index: 1;
 }
 
-.todo__text{
+.todo__text {
     margin-right: 5px;
+}
+
+.todo__time {
+    position: absolute;
+    left: -201px;
+    padding-right: 6px;
+    top: -11px;
+    border: 2px solid #3367d6;
+    margin: 0;
+    border-radius: 20px;
+}
+
+@media all and (max-width: 850px) {
+    .todo__time {
+        position: absolute;
+        left: 0;
+        border: none;
+        height: fit-content;
+        width: fit-content;
+        position: absolute;
+        top: -2px;
+        color: blue;
+        margin: 0;
+    }
+
+    .todos {
+        width: auto;
+    }
 }

@@ -8,24 +8,25 @@ import TodoContainer from './TodoContainer';
 
 export default class Todoapp extends React.Component{
     state = {
-        todos: []
+        todos: [{
+            todo: '',
+            time: ''
+        }]
     }
-    getFullDate = (date) =>{
 
-    }
-
-    handleAddTodo = (todoToValidate) =>{
+    handleAddTodo = (todoToValidate, time) =>{
+    let mappedTodo = this.state.todos.map((todo)=>(todo.todo))
     if(!todoToValidate){
         return 'Pls enter a todo'
-    }else if(this.state.todos.indexOf(todoToValidate) > -1){
+    }else if(mappedTodo.indexOf(todoToValidate) > -1){
         return 'Todo already exist'
     }
-    this.setState((prevState)=>({todos: prevState.todos.concat([todoToValidate])}))
+    this.setState((prevState)=>({todos: prevState.todos.concat({todo: todoToValidate, time})}))
     }
 
     handleDeleteTodo = (optionToDelete) =>{
        this.setState((prevState)=>({
-           todos: prevState.todos.filter((todo)=>{return optionToDelete !== todo})
+           todos: prevState.todos.filter((todo)=>{return optionToDelete !== todo.todo})
        }))
     }
 
