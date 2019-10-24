@@ -8,10 +8,7 @@ import TodoContainer from './TodoContainer';
 
 export default class Todoapp extends React.Component{
     state = {
-        todos: [{
-            todo: '',
-            time: ''
-        }]
+        todos: []
     }
 
     handleAddTodo = (todoToValidate, time) =>{
