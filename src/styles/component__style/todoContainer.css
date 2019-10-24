@@ -24,5 +24,7 @@
         margin-left: 2%;
         margin-bottom: 86px;
     }
-
+    .todo__empty__image{
+        width: 100%;
+    }
 }
