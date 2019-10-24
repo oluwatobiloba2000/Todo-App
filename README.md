@@ -1,4 +1,5 @@
 # React-Todo-App
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7c4a76b9-0681-4d38-ad85-d161dace8728/deploy-status)](https://app.netlify.com/sites/tobi-react-todo-app/deploys)
 
 ## Available Scripts
 

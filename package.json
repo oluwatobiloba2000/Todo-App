@@ -2,7 +2,7 @@
   "name": "anani-oluwatobiloba",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://oluwatobiloba2000.github.io/Todo-App",
+  "homepage": "https://tobi-react-todo-app.netlify.com",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",
