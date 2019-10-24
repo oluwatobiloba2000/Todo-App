@@ -1,0 +1,28 @@
+
+  .todos__display__container{
+    margin-bottom: 0px;
+    margin-left: 20%;
+    margin-right: 10px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.todo__empty__image{
+    align-self: center;
+    width: 400px;
+    height: 54vh;
+    background-repeat: no-repeat;
+}
+
+@media all and (max-width: 750px){
+    .todos__display__container{
+        margin-left: 10%;
+    }
+}
+@media all and (max-width: 550px){
+    .todos__display__container{
+        margin-left: 2%;
+        margin-bottom: 86px;
+    }
+
+}

@@ -1,0 +1,42 @@
+.todos{
+    position: relative;
+    border: 1px solid #3367d6;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    width: fit-content;
+    border-top-left-radius: 0;
+    padding: 3px;
+    text-indent: 10px;
+    justify-content: space-between;
+}
+
+.todo__remove__btn{
+    height: 33px;
+    min-width: 41px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    color: white;
+    background-color: #3367d6;
+}
+
+.arrow{
+    position: absolute;
+    left: -16px;
+    top: -1px;
+    border-right: 16px solid #3367d6;
+    border-bottom: 15px solid transparent;
+}
+
+.todo__count__container{
+    position: sticky;
+    top: 105px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.todo__text{
+    margin-right: 5px;
+}

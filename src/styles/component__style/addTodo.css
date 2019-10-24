@@ -1,0 +1,85 @@
+.todo__form__container,
+.todo__form__container form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.todo__input {
+    height: 42px;
+    width: 54%;
+    border: none;
+    text-indent: 15px;
+    border-radius: 5px;
+    font-size: 27px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.todo__add__btn {
+    margin-left: 25px;
+    width: 135px;
+    height: 41px;
+    border-radius: 10px;
+    outline: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+.error__p {
+    position: absolute;
+    margin: 0;
+    background-color: #de460b;
+    height: 46px;
+    top: 5px;
+    width: 21%;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    left: 132px;
+    z-index: 10000000;
+    color: white;
+}
+
+@media all and (max-width: 930px) {
+    .error__p {
+        position: absolute;
+        margin: 0;
+        background-color: #de460b;
+        height: 19px;
+        top: 108px;
+        width: 100%;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        z-index: 10000000;
+        color: white;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .todo__form__container {
+        position: fixed;
+        bottom: 33px;
+        background-color: #3367d6;
+    }
+    .todo__input{
+        width: 75%;
+        font-size: medium;
+    }
+    .todo__add__btn{
+        margin-left: 10px;
+        width: 20%;
+    }
+    .error__p{
+        position: fixed;
+        top: 36px;
+    }
+    .todo__form__container form{
+        padding-top: 5px;
+    }
+}
