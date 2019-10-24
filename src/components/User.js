@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Time from './Time'
 
 class User extends React.Component{
     state = {
-        currentUser : undefined
+        currentUser : ''
     }
 
     componentDidMount(){
@@ -47,24 +47,5 @@ class User extends React.Component{
     }
 }
 
-class Time extends React.Component{
-    state = {
-        now: undefined
-    }
-
-    componentDidMount(){
-        setInterval(()=>{
-            this.setState(()=>(
-            {now: new Date().toLocaleString()}
-            ))
-        }, 1000)
-    }
-    render(){
-        return(<div className="time__container">
-            <p>{this.state.now}</p>
-        </div>)
-    }
-
-}
 
 export default User;

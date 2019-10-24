@@ -2,7 +2,7 @@ import React from 'react';
 
 class AddTodo extends  React.Component{
     state = {
-        error: undefined
+        error: ''
     }
        handleAddTodo = (e) =>{
         e.preventDefault();
