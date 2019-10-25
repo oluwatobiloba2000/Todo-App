@@ -18,15 +18,27 @@ export default class Todoapp extends React.Component{
     }else if(mappedTodo.indexOf(todoToValidate) > -1){
         return 'Todo already exist'
     }
-    this.setState((prevState)=>({todos: prevState.todos.concat({todo: todoToValidate, time})}))
+    this.setState((prevState)=>({todos: prevState.todos.concat({todo: todoToValidate, time, checkstate : "false"})}))
     }
 
     handleDeleteTodo = (optionToDelete) =>{
        this.setState((prevState)=>({
            todos: prevState.todos.filter((todo)=>{return optionToDelete !== todo.todo})
-       }))
+        }))
     }
 
+    handleCheckTodo = (check)=>{
+        if( this.state.todos[check].checkstate === "true"){
+            this.setState((prevState)=>({
+                checkstate : prevState.todos[check].checkstate = "false"
+            }))
+        }else{
+            this.setState((prevState)=>({
+                checkstate : prevState.todos[check].checkstate = "true"
+            }))
+        } 
+    }
+    
     componentDidMount(){
         try{
             const todoFromDB = localStorage.getItem('todoDB')
@@ -40,9 +52,9 @@ export default class Todoapp extends React.Component{
     }
     
     componentDidUpdate(preprops, prevState){
-      if(prevState.todos.length !== this.state.todos.length){
-          localStorage.setItem('todoDB', JSON.stringify(this.state.todos))
-      }
+    //   if(prevState.todos.length !== this.state.todos.length){
+    // }
+    localStorage.setItem('todoDB', JSON.stringify(this.state.todos))
     }
     render(){
         return  (
@@ -53,7 +65,7 @@ export default class Todoapp extends React.Component{
                 </div>
                <User todosAvaliable={this.state.todos}/>
                <TodoCount index={this.state.todos.length}/>
-               <TodoContainer todos={this.state.todos} handleDeleteTodo={this.handleDeleteTodo} />
+               <TodoContainer todos={this.state.todos} handleCheckTodo={this.handleCheckTodo} handleDeleteTodo={this.handleDeleteTodo} />
             </div>
         )
     }

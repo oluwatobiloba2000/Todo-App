@@ -15,6 +15,7 @@
     height: 33px;
     min-width: 41px;
     border-radius: 20px;
+    outline: none;
     border: none;
     cursor: pointer;
     font-weight: 900;
@@ -51,6 +52,26 @@
     border-radius: 20px;
 }
 
+.finish__todo__button {
+    width: 124px;
+    position: absolute;
+    bottom: 21px;
+    cursor: pointer;
+    top: 21px;
+    height: 21px;
+    background: #9ff141;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    left: -173px;
+}
+.todo__done{
+    position: absolute;
+}
+.todo__done .todo__text{
+    color: red;
+}
 @media all and (max-width: 850px) {
     .todo__time {
         position: absolute;
@@ -66,5 +87,28 @@
 
     .todos {
         width: auto;
+    }
+
+    .finish__todo__button {
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        top: auto;
+        height: 21px;
+        background: #9ff141;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        left: 67%;
+    }
+    .todo__done{
+        left: 178px;
+    }
+}
+
+@media all and (max-width: 550px){
+    .finish__todo__button{
+        left: 60%;
     }
 }
