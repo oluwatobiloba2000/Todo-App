@@ -9,7 +9,7 @@
 }
 .todo__empty__image{
     align-self: center;
-    width: 400px;
+    width: 100%;
     height: 54vh;
     background-repeat: no-repeat;
 }
