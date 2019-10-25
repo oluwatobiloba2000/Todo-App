@@ -69,9 +69,18 @@
 .todo__done{
     position: absolute;
 }
-.todo__done .todo__text{
-    color: red;
+.todos>.todo__done ~ .arrow ~ .todo__time ~ .todo__text{
+    opacity: 0.8;
+    text-decoration: line-through;
 }
+.todos>.todo__done ~ .arrow ~ .todo__time{
+    opacity: 0.8;
+    text-decoration: line-through;
+}
+.todo__done .todos{
+    background-color: grey;
+}
+
 @media all and (max-width: 850px) {
     .todo__time {
         position: absolute;
